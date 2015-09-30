@@ -3,7 +3,7 @@
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:
 #
-server 'server', user: 'rails', roles: %w{ web app db }
+server 'no.rthbound.com', user: 'rails', roles: %w{ web app db }
 
 set :tmp_dir, "/home/rails/var/www/shared/tmp"
 set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
