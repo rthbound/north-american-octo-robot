@@ -1,0 +1,17 @@
+.greetings {
+  background-color: $greetings-background-color;
+}
+
+.good-tidings {
+    background-color: $good-tidings-background-color;
+    animation-name: request_remote_ip;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.salutations {
+    background-color: $salutations-background-color;
+    animation-name: request_ip;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}

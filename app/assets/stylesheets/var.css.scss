@@ -1,0 +1,35 @@
+@-moz-keyframes request_ip{
+  <% request.ip.delete('.').rjust(6,"0").split.cycle(2).to_a.join.split(//).each_cons(6).map(&:join).each_with_index do |color,i| %>
+    <%= (i*100)/1.upto(request.ip.delete(".").split(//).length*2).to_a.each_cons(6).to_a.length.to_s %>% { background-color: <%= color %>; }
+  <% end %>
+}
+
+@-webkit-keyframes request_ip{
+  <% request.ip.delete('.').rjust(6,"0").split.cycle(2).to_a.join.split(//).each_cons(6).map(&:join).each_with_index do |color,i| %>
+    <%= (i*100)/1.upto(request.ip.delete(".").split(//).length*2).to_a.each_cons(6).to_a.length.to_s %>% { background-color: <%= color %>; }
+  <% end %>
+}
+@-o-keyframes request_ip{
+  <% request.ip.delete('.').rjust(6,"0").split.cycle(2).to_a.join.split(//).each_cons(6).map(&:join).each_with_index do |color,i| %>
+    <%= (i*100)/1.upto(request.ip.delete(".").split(//).length*2).to_a.each_cons(6).to_a.length.to_s %>% { background-color: <%= color %>; }
+  <% end %>
+}
+
+@keyframes request_ip {
+  <% request.ip.delete('.').rjust(6,"0").split.cycle(2).to_a.join.split(//).each_cons(6).map(&:join).each_with_index do |color,i| %>
+    <%= (i*100)/1.upto(request.ip.delete(".").split(//).length*2).to_a.each_cons(6).to_a.length.to_s %>% { background-color: <%= color %>; }
+  <% end %>
+}
+
+@keyframes request_remote_ip {
+  <% request.remote_ip.delete('.').rjust(6,"0").split.cycle(2).to_a.join.split(//).each_cons(6).map(&:join).each_with_index do |color,i| %>
+    <%= (i*100)/1.upto(request.remote_ip.delete(".").split(//).length*2).to_a.each_cons(6).to_a.length.to_s %>% { background-color: <%= color %>; }
+  <% end %>
+}
+  
+$greetings-background-color:    $primary;
+$good-tidings-background-color: <%= "#008ece" %>;
+$salutations-background-color:  <%= "#0c539c" %>;
+
+
+$primary:              <%= "green" %>;

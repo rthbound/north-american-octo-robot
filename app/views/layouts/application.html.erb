@@ -2,13 +2,20 @@
 <html>
 <head>
   <title>App</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <style>
+      <%= @css %>
+    </style>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<div class='body-container'>
+  <%= yield %>
+</div>
+<div class='greetings'></div>
+<div class='good-tidings'></div>
+<div class='salutations'></div>
 
 </body>
 </html>

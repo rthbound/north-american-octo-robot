@@ -1,0 +1,19 @@
+div {
+  height: 100px;
+}
+.body-container {
+  display: inline;
+}
+
+
+.greetings::before {
+  content: attr(data-greetings) 'Greetings';
+}
+
+.good-tidings::before {
+  content: attr(data-good-tidings) 'Good tidings.';
+}
+
+.salutations::before {
+  content: attr(data-salutations) 'Salutations.';
+}
