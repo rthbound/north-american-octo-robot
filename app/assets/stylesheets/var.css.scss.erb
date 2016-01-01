@@ -1,12 +1,14 @@
 @keyframes request_ip {
-  <% request.ip.delete('.').rjust(6,"0").split.cycle(2).to_a.join.split(//).each_cons(6).map(&:join).each_with_index do |color,i| %>
-    <%= ((i*100)/1.upto(request.ip.delete(".").split(//).length*2).to_a.each_cons(6).to_a.length).to_s %>% { background-color: <%= "##{color}" %>; }
+  <% colors = Digest::MD5.hexdigest("#{request.ip}#{request.uuid}").split(//).each_cons(6).map(&:join) %>
+  <% colors.each_with_index do |color,i| %>
+    <%= ((i*100)/colors.length).to_s %>% { background-color: <%= "##{color}" %>; }
   <% end %>
 }
 
 @keyframes request_remote_ip {
-  <% request.ip.delete('.').rjust(6,"0").split.cycle(2).to_a.join.split(//).each_cons(6).map(&:join).each_with_index do |color,i| %>
-    <%= ((i*100)/1.upto(request.ip.delete(".").split(//).length*2).to_a.each_cons(6).to_a.length).to_s %>% { background-color: <%= "##{color}" %>; }
+  <% colors = Digest::MD5.hexdigest("#{request.remote_ip}#{request.uuid}").split(//).each_cons(6).map(&:join) %>
+  <% colors.each_with_index do |color,i| %>
+    <%= ((i*100)/colors.length).to_s %>% { background-color: <%= "##{color}" %>; }
   <% end %>
 }
 
