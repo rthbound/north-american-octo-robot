@@ -1,7 +1,9 @@
 div {
-  min-height: 100px;
-  height: 6400px;
-  width: 6400px;
+  width: 100%;
+  height: 400px;
+  background-size: contain;
+  background-position: center center;
+  text-align: center;
 }
 .body-container {
   display: inline;
@@ -9,13 +11,13 @@ div {
 
 
 .greetings::before {
-  content: attr(data-greetings) 'Greetings';
+  //content: attr(data-greetings) 'Greetings';
 }
 
 .good-tidings::before {
-  content: attr(data-good-tidings) 'Good tidings.';
+  //content: attr(data-good-tidings) 'Good tidings.';
 }
 
 .salutations::before {
-  content: attr(data-salutations) 'Salutations.';
+  //content: attr(data-salutations) 'Salutations.';
 }
